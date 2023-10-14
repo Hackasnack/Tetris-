@@ -254,6 +254,7 @@ function gameOver() {
     if(current.some(index => squares[currentPosition + index].classList.contains('taken'))) {
         lost.innerHTML = "Game Over"
         clearInterval(timerId)
+        document.removeEventListener('keyup', control)
         
     }
 }
